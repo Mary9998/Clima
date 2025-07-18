@@ -1,0 +1,30 @@
+@media (min-width: 320px) {
+      #container {
+         width: 70%;
+    }
+
+    #temp_value {
+        font-size: 35px;
+    }
+ 
+}
+
+@media (min-width: 768px){
+    #container{
+        width: 50%;
+    }
+
+    #temp_value {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1024px){
+    #container{
+        width: 25%;
+    }
+
+    #temp_value {
+        font-size: 40px;
+    }
+}
