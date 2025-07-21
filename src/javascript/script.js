@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     console.log(cityName);
     
     const apiKey ='32eec8892f04109413e8edc0aa070a52'
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cityName)}&appid=${apiKey}&units=metric&lang=pt_br`
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cityName)}&appid=${apiKey}&units=metric&lang=pt_br`
 
     const results = await fetch(apiUrl);
     const json = await results.json();
@@ -54,7 +54,7 @@ function showInfo(json){
      document.querySelector("#temp_max").innerHTML = `${json.tempMax.toFixed(1).toString().replace('.',',')} <sup>C°</sup>`;
      document.querySelector("#temp_min").innerHTML = `${json.tempMin.toFixed(1).toString().replace('.',',')} <sup>C°</sup>`;
      document.querySelector("#humidity").innerHTML = `${json.humidity}%`;
-     document.querySelector("#wind").innerHTML = `${(json.windSpeed * 3.6).toFixed(1)}k/h`;
+     document.querySelector("#wind").innerHTML = `${(json.windSpeed * 3.6).toFixed(1)}km/h`;
 }
 
 function showAlert(msg) {
