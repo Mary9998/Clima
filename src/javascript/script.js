@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () =>{
   document.querySelector('#search').addEventListener('submit', async (event) =>{
     event.preventDefault();
 
-    const cityName = document.querySelector('#city_name').value;
+    const cityName = document.querySelector('#city_name').value.trim;
 
     if (!cityName) {
         document.querySelector("#weather").classList.remove('show');
